@@ -28,6 +28,8 @@ const CodeExplainForm = () => {
                 <p className="thinking-text">Thinking...</p>
             ) : formState?.success ? (
                 <CodeExplanation explanation={formState?.data.explanation} />
+            ) : formState?.error ? (
+                <p className="error-text">{formState.error}</p>
             ) : null
         }
     </div>
